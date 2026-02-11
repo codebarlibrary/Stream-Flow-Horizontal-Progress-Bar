@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="progress-wrapper">
+    <div class="label-group">
+        <span class="status-text">SYSTEM_SYNCING...</span>
+        <span class="percent-val" id="percentText">45%</span>
+    </div>
+    
+    <div class="horizontal-liquid-bar">
+        <div class="liquid-progress" id="liquidBar" style="width: 45%;">
+            <div class="water-wave"></div>
+        </div>
+    </div>
+
+    <div class="control-panel">
+        <button onclick="moveProgress(30)">30%</button>
+        <button onclick="moveProgress(75)">75%</button>
+        <button onclick="moveProgress(100)">100%</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

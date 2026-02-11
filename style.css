@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+    background: #050505;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.progress-wrapper {
+    width: 400px;
+    padding: 20px;
+}
+
+.label-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.status-text {
+    color: #8b949e;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.percent-val {
+    color: #00f3ff;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+
+.horizontal-liquid-bar {
+    position: relative;
+    width: 100%;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.liquid-progress {
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(90deg, #0072ff, #00f3ff);
+    border-radius: 50px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+
+.water-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    animation: flowWave 2s linear infinite;
+    transform: skewX(-20deg);
+}
+
+@keyframes flowWave {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+
+.control-panel {
+    margin-top: 25px;
+    text-align: center;
+}
+
+button {
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 5px 12px;
+    cursor: pointer;
+    margin: 3px;
+    font-size: 0.7rem;
+    transition: 0.2s;
+}
+
+button:hover {
+    border-color: #00f3ff;
+    color: #00f3ff;
+}
